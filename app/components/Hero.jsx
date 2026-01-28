@@ -1,60 +1,106 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, useMotionValue, animate } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
 
+// Variants for sliding animation
+const slideDown = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const slideUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
 const Hero = () => {
+  // Motion value for stats
+  const projects = useMotionValue(0);
+  const [projectsDisplay, setProjectsDisplay] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = projects.on("change", latest => {
+      setProjectsDisplay(Math.round(latest));
+    });
+    return () => unsubscribe();
+  }, [projects]);
+
+  // Run count every time it scrolls into view
+  const runCount = () => {
+    projects.set(0);
+    animate(projects, 500, { duration: 1.5, ease: "easeOut" });
+  };
+
   return (
     <section>
       <div className="grid grid-cols-4 ">
+
         {/* Left Section */}
         <div className="col-span-3 bg-[#001219] pt-5 pb-60 relative ">
+
+          {/* NAV */}
           <nav className="flex items-center justify-between ml-11 mr-11 ">
             <img src="/image/logo.svg" alt="logo" />
             <ul className="flex items-center gap-8 font-quantico">
-              <li className="text-[#64EE97] font-medium  text-md">
-                <a href="#">Home</a>
-              </li>
-              <li className="text-[#64EE97] font-medium  text-md">
-                <a href="#">Services</a>
-              </li>
-              <li className="text-[#64EE97] font-medium  text-md">
-                <a href="#">Portfolio</a>
-              </li>
-              <li className="text-[#64EE97] font-medium  text-md">
-                <a href="#">About</a>
-              </li>
+              <li className="text-[#64EE97] font-medium  text-md"><a href="#">Home</a></li>
+              <li className="text-[#64EE97] font-medium  text-md"><a href="#">Services</a></li>
+              <li className="text-[#64EE97] font-medium  text-md"><a href="#">Portfolio</a></li>
+              <li className="text-[#64EE97] font-medium  text-md"><a href="#">About</a></li>
             </ul>
           </nav>
-          <div className="p-5 ml-10 mt-30 font-quantico">
-            <h1 className="text-[#64EB95] font-bold text-[39.61px] leading-[100%]">
+
+          {/* HERO TEXT */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ staggerChildren: 0.3 }}
+            className="p-5 ml-10 mt-30 font-quantico"
+          >
+            <motion.h1 variants={slideDown} className="text-[#64EB95] font-bold text-[39.61px] leading-[100%]">
               BRINGING IDEAS TO LIFE THROUGH
-            </h1>
-            <h2 className="font-bold text-[63.08px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent">
+            </motion.h1>
+            <motion.h2 variants={slideDown} className="font-bold text-[63.08px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent">
               SOFTWARE INNOVATIVE
-            </h2>
-            <h3 className="font-bold text-[101.14px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent">
+            </motion.h2>
+            <motion.h3 variants={slideDown} className="font-bold text-[101.14px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent">
               {" "}
               & 3D ANIMATION
-            </h3>
-
-            <p className="font-md text-[24px] leading-6 mt-5 text-[#FFFFFF]">
+            </motion.h3>
+            <motion.p variants={slideDown} className="font-md text-[24px] leading-6 mt-5 text-[#FFFFFF]">
               We build immersive visuals and scalable <br /> software, all
               tailored to help your brand stand out.
-            </p>
-          </div>
-          <div className="flex items-center gap-5 ml-17 mt-5">
-            <button className="bg-[#64EB95] py-2 px-3 flex items-center gap-2 font-md text-md text[#001219]  ">
+            </motion.p>
+          </motion.div>
+
+          {/* BUTTONS */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ staggerChildren: 0.3 }}
+            className="flex items-center gap-5 ml-17 mt-5"
+          >
+            <motion.button variants={slideDown} className="bg-[#64EB95] py-2 px-3 flex items-center gap-2 font-md text-md text[#001219]  ">
               Request a
               <span className="font-bold text-sm">Free Consultation</span>
               <GoArrowUpRight />
-            </button>
+            </motion.button>
 
-            <button className="bg-[#64EB95] py-2 px-3 flex items-center gap-2 font-md text-md text[#001219]  ">
+            <motion.button variants={slideDown} className="bg-[#64EB95] py-2 px-3 flex items-center gap-2 font-md text-md text[#001219]  ">
               View Our Portfolio
               <GoArrowUpRight />
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
+
+          {/* LINE */}
           <div className="ml-90 mt-5">
             <img src="image/Hline.svg" alt="Hline" />
           </div>
+
+          {/* IMAGE */}
           <div className="absolute bottom-0 -right-60">
             <img
               src="image/cyberboy.svg"
@@ -62,17 +108,25 @@ const Hero = () => {
               className="size-155"
             />
           </div>
-          <div className="bg-[#414141]/50 w-[598px] h-[97px] flex items-center gap-5 p-5 font-quantico absolute bottom-10 -right-60">
+
+          {/* STATS WITH COUNT */}
+          <motion.div
+            onViewportEnter={runCount}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={slideUp}
+            className="bg-[#414141]/50 w-[598px] h-[97px] flex items-center gap-5 p-5 font-quantico absolute bottom-10 -right-60"
+          >
             <div>
-              <h4 className="text-[#64EE97] text-5xl font-bold">500+</h4>
+              <h4 className="text-[#64EE97] text-5xl font-bold">{projectsDisplay}+</h4>
               <p className="text-[#FFFFFF] text-sm">Project Delivered</p>
             </div>
             <img src="image/Line.svg" alt="line" />
             <p className="text-[#FFFFFF] text-sm">
-              We're here to help you transform your ideas <br /> into digital
-              reality.
+              We're here to help you transform your ideas <br /> into digital reality.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Section */}
@@ -94,6 +148,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
