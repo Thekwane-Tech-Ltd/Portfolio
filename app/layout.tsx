@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Quantico as QuanticoFont } from "next/font/google";
+import { Quantico as QuanticoFont, Questrial as QuestrialFont, Rasa as RasaFont } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer";
 
 const Quantico = QuanticoFont({
   variable: "--font-quantico",
@@ -8,6 +9,17 @@ const Quantico = QuanticoFont({
   weight: ["400", "700"],
 });
 
+const Questrial = QuestrialFont({
+  variable: "--font-questrial",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const Rasa = RasaFont({
+  variable: "--font-rasa",
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,9 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Quantico.variable}  antialiased`}
+        className={`${Quantico.variable} ${Questrial.variable} ${Rasa.variable}  antialiased overflow-x-hidden`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

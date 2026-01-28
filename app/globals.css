@@ -11,6 +11,12 @@ body {
 .font-quantico {
   font-family: var(--font-quantico), sans-serif;
 }
+.font-questrial {
+  font-family: var(--font-questrial), sans-serif;
+}
+.font-rasa {
+  font-family: var(--font-rasa), sans-serif;
+}
 body::before {
   content: "";
   position: fixed; 
