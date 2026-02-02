@@ -17,6 +17,15 @@ body {
 .font-rasa {
   font-family: var(--font-rasa), sans-serif;
 }
+.font-rammettoOne{
+  font-family: var(--font-rammettoOne), sans-serif;
+}
+.font-inter{
+  font-family: var(--font-inter), sans-serif;
+}
+.font-racingSansOne{
+  font-family: var(--font-racingSansOne), sans-serif;
+}
 body::before {
   content: "";
   position: fixed; 
@@ -27,5 +36,9 @@ body::before {
   background: url("/image/bodybackground.png") fixed;
   z-index: -1; 
   opacity: 0.1;
+}
+.service-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 

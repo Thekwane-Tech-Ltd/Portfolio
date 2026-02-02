@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, animate } from "framer-motion";
 import { GoArrowUpRight } from "react-icons/go";
+import Link from "next/link";
 
-// Variants for sliding animation
 const slideDown = {
   hidden: { opacity: 0, y: -50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -45,7 +45,7 @@ const Hero = () => {
             <img src="/image/logo.svg" alt="logo" />
             <ul className="flex items-center gap-8 font-quantico">
               <li className="text-[#64EE97] font-medium  text-md"><a href="#">Home</a></li>
-              <li className="text-[#64EE97] font-medium  text-md"><a href="#">Services</a></li>
+              <li className="text-[#64EE97] font-medium  text-md"><Link href="/Service">Services</Link></li>
               <li className="text-[#64EE97] font-medium  text-md"><a href="#">Portfolio</a></li>
               <li className="text-[#64EE97] font-medium  text-md"><a href="#">About</a></li>
             </ul>
