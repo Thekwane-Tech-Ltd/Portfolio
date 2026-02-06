@@ -1,15 +1,14 @@
-"use client";
+"use client"
 
-import { useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
-import Link from "next/link";
+import { useState } from "react";
+import Link from "next/link"
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-
+const PortfolioNavbar  = () => {
+   const [open, setOpen] = useState(false);
   return (
-    <section className="h-[492px] w-full relative">
+    <section className="h-[400px] md:h-[492px] w-full relative">
       {/* Background */}
       <div className="absolute inset-0 bg-[#222222] z-0">
         <img
@@ -95,18 +94,18 @@ const Navbar = () => {
         {/* HERO TEXT */}
         <div className="mx-10 my-15 md:mx-40 md:my-20 text-center">
           <button className="border border-white px-8 py-3 md:px-3 md:py-2 text-white text-[18px] md:text-[22px] leading-[100%] rounded-full mb-10 font-quantico">
-            Our Services
+           Our Portfolio
           </button>
 
-          <h1 className="font-rasa font-bold md:font-bold text-white text-[28px] md:text-[64px] leading-[100%] mb-3">
-            Smart Digital Solutions Built for Growth
+          <h1 className="font-rammettoOne font-medium md:font-bold text-white text-[18px] md:text-[30px] leading-[100%] mb-3">
+           Explore our portfolio of  web applications, mobile  apps, blockchain projects, bots, software  systems, and animation work  delivered for global clients.
           </h1>
 
-          <p className="font-light md:font-medium text-white text-[14px] md:text-[22px] leading-[100%] font-quantico">
+          {/* <p className="font-light md:font-medium text-white text-[14px] md:text-[22px] leading-[100%] font-quantico">
             We design, build, and scale technology solutions that help businesses
             <br />
             stand out, perform better, and grow faster in the digital world.
-          </p>
+          </p> */}
         </div>
 
       </div>
@@ -114,4 +113,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default PortfolioNavbar ;

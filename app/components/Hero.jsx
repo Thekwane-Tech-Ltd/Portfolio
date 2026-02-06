@@ -44,10 +44,10 @@ const Hero = () => {
           <nav className="flex items-center justify-between ml-11 mr-11 ">
             <img src="/image/logo.svg" alt="logo" />
             <ul className="flex items-center gap-8 font-quantico">
-              <li className="text-[#64EE97] font-medium  text-md"><a href="#">Home</a></li>
+              <li className="text-[#64EE97] font-medium  text-md"><Link href="/">Home</Link></li>
               <li className="text-[#64EE97] font-medium  text-md"><Link href="/Service">Services</Link></li>
-              <li className="text-[#64EE97] font-medium  text-md"><a href="#">Portfolio</a></li>
-              <li className="text-[#64EE97] font-medium  text-md"><a href="#">About</a></li>
+              <li className="text-[#64EE97] font-medium  text-md"><Link href="/Portfolio">Portfolio</Link></li>
+              <li className="text-[#64EE97] font-medium  text-md"><Link href="/About">About</Link></li>
             </ul>
           </nav>
 
