@@ -24,14 +24,14 @@ const RequestQuote = () => {
       </div>
 
       <motion.div
-        className="mx-auto text-center absolute top-40 left-50"
+        className="mx-auto text-center absolute top-10 md:top-40 md:left-50 left-5"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         variants={staggerContainer}
       >
         <motion.h4
-          className="font-questrial text-[33.07px] font-medium leading-[130%] text-white mb-5"
+          className="font-questrial text-[20px] md:text-[33.07px] font-medium leading-[130%] text-white mb-5"
           variants={slideDown}
         >
           Looking for a reliable software and blockchain development company?{" "}

@@ -44,9 +44,7 @@ const PortfolioNavbar  = () => {
           {/* Desktop Contact Button */}
           <div className="hidden md:flex justify-center">
             <div>
-              <button className="bg-white px-2 rounded-sm">
-                Contact us
-              </button>
+              <button className="bg-white px-2 rounded-sm"><Link href="/Contact">Contact Us</Link></button>
             </div>
             <div className="w-6 h-6 bg-[#64EE97] rounded-full flex items-center justify-center">
               <GoArrowUpRight className="text-white" />
@@ -81,9 +79,7 @@ const PortfolioNavbar  = () => {
             </ul>
 
             <div className="flex items-center gap-2 pt-4">
-              <button className="bg-white px-3 py-1 rounded-sm">
-                Contact us
-              </button>
+              <button className="bg-white px-2 rounded-sm"><Link href="/Contact">Contact Us</Link></button>
               <div className="w-6 h-6 bg-[#64EE97] rounded-full flex items-center justify-center">
                 <GoArrowUpRight className="text-white" />
               </div>
@@ -97,15 +93,9 @@ const PortfolioNavbar  = () => {
            Our Portfolio
           </button>
 
-          <h1 className="font-rammettoOne font-medium md:font-bold text-white text-[18px] md:text-[30px] leading-[100%] mb-3">
+          <h1 className="font-rammettoOne font-medium md:font-bold text-white text-[15px] md:text-[30px] leading-[100%] mb-3">
            Explore our portfolio of  web applications, mobile  apps, blockchain projects, bots, software  systems, and animation work  delivered for global clients.
           </h1>
-
-          {/* <p className="font-light md:font-medium text-white text-[14px] md:text-[22px] leading-[100%] font-quantico">
-            We design, build, and scale technology solutions that help businesses
-            <br />
-            stand out, perform better, and grow faster in the digital world.
-          </p> */}
         </div>
 
       </div>

@@ -32,7 +32,7 @@ import { motion } from "framer-motion";
 
 const WhyChooseUs = () => {
     return (
-     <div className="mx-6 lg:mx-17 my-30 p-6 lg:p-10 font-quantico">
+     <div className="mx-0 lg:mx-17 my-30 p-6 lg:p-10 font-quantico">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -50,25 +50,26 @@ const WhyChooseUs = () => {
         </motion.div>
 
       <motion.div
-      className="flex items-center justify-around gap-15"
+      className="flex flex-col md:flex-row
+       items-center justify-around gap-15 md:gap-15 my-15"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
       variants={container}
     >
-      <div className="bg-[#3D9865] w-[101px] h-[466px] relative -left-35 rounded-xl"></div>
+      <div className="bg-[#3D9865] w-[101px] h-[466px] relative -left-35 rounded-xl hidden md:block"></div>
 
       <div>
         <motion.div variants={slideUp} className="text-center my-5">
           <img src="image/wcu1.svg" alt="img" className="mx-auto " />
           <h5 className="font-bold text-[22.22px] text-[#000000] leading-[100%]">Collaborative Approach</h5>
-          <p className="font-medium text-sm leading-[100%] text-[#555555]">We see ourselves as an extension of your team.</p>
+          <p className="font-medium text-md md:text-sm leading-[100%] text-[#555555]">We see ourselves as an extension of your team.</p>
         </motion.div>
 
         <motion.div variants={slideUp} className="text-center mt-18">
           <img src="image/wcu2.svg" alt="img" className="mx-auto" />
           <h5 className="font-bold text-[22.22px] text-[#000000]">Innovation-Driven</h5>
-          <p className="font-medium text-sm leading-[100%] text-[#555555]">We stay ahead of trends to give you future-ready solutions.</p>
+          <p className="font-medium text-md md:text-sm leading-[100%] text-[#555555]">We stay ahead of trends to give you future-ready solutions.</p>
         </motion.div>
       </div>
 
@@ -80,17 +81,17 @@ const WhyChooseUs = () => {
         <motion.div variants={slideUp} className="text-center my-5">
           <img src="image/wcu4.svg" alt="img" className="mx-auto" />
           <h5 className="font-bold text-[22.22px] text-[#000000]">Results-Focused</h5>
-          <p className="font-medium text-sm leading-[100%] text-[#555555]">Your success is the true measure of our work.</p>
+          <p className="font-medium text-md md:text-smleading-[100%] text-[#555555]">Your success is the true measure of our work.</p>
         </motion.div>
 
         <motion.div variants={slideUp} className="text-center mt-18">
           <img src="image/wcu5.svg" alt="img" className="mx-auto" />
           <h5 className="font-bold text-[22.22px] text-[#000000]">IT Expert</h5>
-          <p className="font-medium text-sm leading-[100%] text-[#555555]">We understand your business needs.</p>
+          <p className="font-medium text-md md:text-sm leading-[100%] text-[#555555]">We understand your business needs.</p>
         </motion.div>
       </div>
 
-      <div variants={slideRight} className="bg-[#3D9865] w-[101px] h-[466px] relative -right-35 rounded-xl"></div>
+      <div variants={slideRight} className="bg-[#3D9865] w-[101px] h-[466px] relative -right-35 rounded-xl hidden md:block "></div>
     </motion.div>
      </div>
     )

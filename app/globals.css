@@ -26,6 +26,9 @@ body {
 .font-racingSansOne{
   font-family: var(--font-racingSansOne), sans-serif;
 }
+.font-Montserrat{
+  font-family: var(--font-montserrat), sans-serif;
+}
 body::before {
   content: "";
   position: fixed; 

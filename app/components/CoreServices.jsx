@@ -85,7 +85,7 @@ const cardVariants = {
 const CoreServices = () => {
   return (
     <section>
-      <div className="mx-6 lg:mx-17 my-10 p-6 lg:p-10 font-quantico">
+      <div className="mx-1 lg:mx-17 my-10 p-6 lg:p-10 font-quantico">
 
         {/* Heading */}
         <motion.div
@@ -109,7 +109,7 @@ const CoreServices = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-fit mx-auto"
+          className="grid grid-cols-1 lg:grid-cols-4 gap-10 max-w-fit mx-1 md:mx-auto"
         >
           {services.map((service, index) => (
             <motion.div
@@ -119,8 +119,10 @@ const CoreServices = () => {
                 bg-[#FFFFFF0D]
                 shadow-lg
                 rounded-xl
-                w-[234px]
-                h-[312px]
+                w-full
+                h-auto
+                md:w-[234px]
+                md:h-[312px]
                 p-5
                 flex flex-col
                 transition-all
