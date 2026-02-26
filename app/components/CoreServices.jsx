@@ -95,7 +95,7 @@ const CoreServices = () => {
           transition={{ duration: 0.5 }}
           className="w-fit mx-auto text-center mb-10"
         >
-          <button className="border border-black py-1 px-5 rounded-xl text-[27.11px] font-bold leading-none">
+          <button className="border border-black py-1 px-5 rounded-xl text-[15px] md:text-[27.11px] font-bold leading-none">
             OUR CORE SERVICES
           </button>
           <p className="text-[20px] font-medium mt-2">

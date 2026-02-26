@@ -141,11 +141,11 @@ const Hero = () => {
           </div>
 
           {/* MOBILE IMAGE (inside flow) */}
-          <div className="md:hidden mt-10 absolute top-114">
+          <div className="md:hidden mt-10 absolute top-129">
             <img
               src="image/cyberboy.svg"
               alt="cyberpunkboyillustration"
-              className="w-80"
+              className="w-74"
             />
           </div>
 
@@ -156,7 +156,7 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={slideUp}
-            className="flex bg-[#414141]/50 w-[350px] md:w-[598px] h-[87px] md:h-[97px] items-center gap-5 p-5 font-quantico absolute -bottom-33 right-6 md:bottom-10 md:-right-60"
+            className="flex bg-[#414141]/50 w-[350px] md:w-[598px] h-[87px] md:h-[97px] items-center gap-5 p-5 font-quantico absolute -bottom-33 right-4 md:bottom-10 md:-right-60"
           >
             <div>
               <h4 className="text-[#64EE97] text-4xl md:text-5xl font-bold">{projectsDisplay}+</h4>
@@ -194,8 +194,8 @@ const Hero = () => {
       </div>
 
       {/* Mobile Bottom Section (NO Contact Button) */}
-      <div className="md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] py-19 text-center font-quantico ">
-        <p className="font-medium text-white text-lg leading-[100%] absolute top-130 left-45">
+      <div className="md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-39 text-center font-quantico ">
+        <p className="font-medium text-white text-lg leading-[100%] absolute top-138 left-45">
           Impowering industries <br />
           with next-Gen Tech
         </p>

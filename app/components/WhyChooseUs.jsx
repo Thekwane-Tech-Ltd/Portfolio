@@ -41,10 +41,10 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.5 }}
           className="w-fit mx-auto text-center mb-2"
         >
-          <button className="border border-black py-1 px-5 rounded-xl text-[27.11px] font-bold leading-none">
+          <button className="border border-black py-1 px-5 rounded-xl text-[15px] md:text-[27.11px] font-bold leading-none">
            Why choose <span className="font-medium">us?</span>
           </button>
-          <p className="text-[24px] font-medium mt-2">
+          <p className="text-[15px] md:text-[24px] font-medium mt-2">
             At Thekwane, we don’t just build projects, we build partnerships. Let’s create something extraordinary together.
           </p>
         </motion.div>

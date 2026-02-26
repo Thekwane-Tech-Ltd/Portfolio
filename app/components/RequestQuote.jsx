@@ -31,21 +31,21 @@ const RequestQuote = () => {
         variants={staggerContainer}
       >
         <motion.h4
-          className="font-questrial text-[20px] md:text-[33.07px] font-medium leading-[130%] text-white mb-5"
+          className="font-questrial text-[15px] md:text-[33.07px] font-medium leading-[130%] text-white mb-5"
           variants={slideDown}
         >
           Looking for a reliable software and blockchain development company?{" "}
         </motion.h4>
 
         <motion.p
-          className="font-rasa text-[25px] font-medium leading-[130%] text-white mb-2"
+          className="font-rasa text-[14px] md:text-[25px] font-medium leading-[130%] text-white mb-2"
           variants={slideDown}
         >
           Let’s build your next digital solution.
         </motion.p>
 
         <motion.button
-          className="font-rasa text-[24.78px] font-medium px-5 py-1 bg-[#64EE97] text-[#070E14] rounded-full"
+          className="font-rasa text-[14px] md:text-[24.78px] font-medium px-2 md:px-5 py-1 bg-[#64EE97] text-[#070E14] rounded-full"
           variants={slideDown}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
