@@ -4,49 +4,49 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: "image/core1.svg",
+    icon: "/image/core1.svg",
     title: "Web Application Development",
     description:
       "We build high-performance web applications using React, Next.js, Node.js, and modern cloud infrastructure optimized for SEO, speed, and security.",
   },
   {
-    icon: "image/core2.svg",
+    icon: "/image/core2.svg",
     title: "Blockchain Development Services",
     description:
       "Smart contracts, DeFi solutions, and blockchain integration for decentralized applications.",
   },
   {
-    icon: "image/core3.svg",
+    icon: "//image/core3.svg",
     title: "Mobile App Development (Android & iOS)",
     description:
       "Custom Android and iOS apps using Flutter, React Native, and Expo, ensuring scalability and excellent user experience.",
   },
   {
-    icon: "image/core4.svg",
+    icon: "/image/core4.svg",
     title: "Custom Software & IT Consulting",
     description:
       "Tailored software solutions, API development, system architecture, code audits, and technical consulting.",
   },
   {
-    icon: "image/core5.svg",
+    icon: "/image/core5.svg",
     title: "Bot Development & Automation",
     description:
       "Secure Telegram, Discord, trading, and automation bots integrated with APIs, databases, and blockchain networks.",
   },
   {
-    icon: "image/core6.svg",
+    icon: "/image/core6.svg",
     title: "Game Development",
     description:
       "High-quality game development solutions using modern tools and engines.",
   },
   {
-    icon: "image/core7.svg",
+    icon: "/image/core7.svg",
     title: "2D & 3D Animation Services",
     description:
       "Professional 2D explainer videos, 3D animation, motion graphics, and character animation.",
   },
   {
-    icon: "image/core8.svg",
+    icon: "/image/core8.svg",
     title: "3D Modeling & Character Design",
     description:
       "High-quality 3D modeling, character design, and product visualization.",
