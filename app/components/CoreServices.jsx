@@ -16,7 +16,7 @@ const services = [
       "Smart contracts, DeFi solutions, and blockchain integration for decentralized applications.",
   },
   {
-    icon: "//image/Core3.svg",
+    icon: "/image/Core3.svg",
     title: "Mobile App Development (Android & iOS)",
     description:
       "Custom Android and iOS apps using Flutter, React Native, and Expo, ensuring scalability and excellent user experience.",
