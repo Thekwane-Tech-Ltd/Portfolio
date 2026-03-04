@@ -194,7 +194,7 @@ const Hero = () => {
       </div>
 
       {/* Mobile Bottom Section (NO Contact Button) */}
-      <div className="md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-39 text-center font-quantico ">
+      <div className="md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-45 text-center font-quantico ">
         <p className="font-medium text-white text-lg leading-[100%] absolute top-138 left-45">
           Impowering industries <br />
           with next-Gen Tech

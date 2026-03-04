@@ -54,7 +54,7 @@ const About = () => {
         className="w-full "
       >
         <motion.img
-          src="/image/aboutimg.svg"
+          src="/image/aboutImg.svg"
           alt="aboutimage"
           className="w-full md:w-auto"
           whileHover={{ scale: 1.03 }}
