@@ -1,6 +1,6 @@
 const IndustriesWeServe = () =>{
     return (
-        <div className="relative h-[533px] my-30">
+        <div className="relative h-[533px] md:h-auto my-30">
       <div className="absolute inset-0 bg-gradient-to-l from-[#176634] to-black z-0" />
       <img
         src="/image/Portfolioimg7.svg"
@@ -8,7 +8,7 @@ const IndustriesWeServe = () =>{
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      <div className="relative z-10 max-w-7xl md:mx-20 my-20 px-3 py-20 text-white font-quantico grid grid-cols-2 md:grid-cols-3 gap-6 gap-y-28">
+      <div className="relative z-10 max-w-7xl md:mx-20 my-20 px-3 py-20 text-white font-quantico grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-28">
         <div className="text-white font-racingSansOne">
           <h1 className="text-[20.68px] md:text-[57.68px] leading-[100%]">Industries we <span className="text-[#64EE97] text-[30.21px] md:text-[89.21px] leading-[100%] ml-20">SERVE</span></h1>
         

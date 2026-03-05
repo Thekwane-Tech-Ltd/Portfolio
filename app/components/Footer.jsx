@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CiFacebook, CiLinkedin, CiInstagram, CiTwitter } from "react-icons/ci";
 import { PiTiktokLogo } from "react-icons/pi";
+import Link from "next/link";
 
 const Footer = () => {
   const fadeUp = {
@@ -16,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative h-full md:h-[650px]">
+    <footer className="relative h-full lg:h-[650px]">
       <div className="absolute inset-0 bg-gradient-to-l from-[#176634] to-black z-0" />
       <img
         src="/image/Footerbg.svg"
@@ -32,7 +33,7 @@ const Footer = () => {
         variants={staggerContainer}
       >
         <motion.div
-          className="flex flex-col md:flex-row items-start justify-center gap-16 md:gap-40 mt-10"
+          className="flex flex-col lg:flex-row items-start justify-center gap-16 lg:gap-40 mt-10"
           variants={fadeUp}
         >
           {/* Logo & Social */}
@@ -60,17 +61,17 @@ const Footer = () => {
 
           {/* Link Columns */}
           <motion.div
-            className="flex flex-col sm:flex-row items-start justify-around gap-12 md:gap-40 w-full md:w-auto"
+            className="flex flex-col lg:flex-row items-start justify-around gap-12 lg:gap-40 w-full md:w-auto"
             variants={fadeUp}
           >
             <motion.div className="font-quantico" variants={fadeUp}>
               <h6 className="font-bold text-[#16D612] text-[18px] text-left">QUICKLINKS</h6>
               <ul className="text-[15px] font-medium text-left Leading-[100%]">
-                <li className="mb-5"><a href="#">Home</a></li>
-                <li className="mb-5"><a href="#">Services</a></li>
-                <li className="mb-5"><a href="#">Portfolio</a></li>
-                <li className="mb-5"><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li className="mb-5"><Link href="/">Home</Link></li>
+                <li className="mb-5"><Link href="/Service">Services</Link></li>
+                <li className="mb-5"><Link href="/Portfolio">Portfolio</Link></li>
+                <li className="mb-5"><Link href="/About">About Us</Link></li>
+                <li><Link href="/Contact">Contact Us</Link></li>
               </ul>
             </motion.div>
 

@@ -39,7 +39,7 @@ const OurMission = () => {
           </h1>
         </div>
         {/* Our Mission */}
-        <div className="h-[750px] md:h-[525px] w-full relative mb-60">
+        <div className="h-[750px] md:h-[650px] lg:h-[525px] w-full relative mb-60">
           {/* background */}
           <div className="absolute inset-0 bg-[#254031] z-0">
             <img
@@ -60,8 +60,8 @@ const OurMission = () => {
                   DISCOVER THE CORE PRINCIPLE THAT GUIDE US
                 </h1>
               </div>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-15 m-2 md:gap-10 p-5 md:p-10 ">
-                <div className="w-[411px] h-[212px] bg-white relative">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-15 m-2 md:gap-10 p-5 lg:p-10 ">
+                <div className="w-[411px] md:h-[230px] h-[212px] bg-white relative">
                   <div className="w-[71px] h-[71px] bg-[#64EE97] flex items-center justify-center absolute -top-10 left-20">
                     <img src="image/Omicon1.svg" alt="Omicon" />
                   </div>
@@ -78,7 +78,7 @@ const OurMission = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-[411px] h-[212px] bg-white relative">
+                <div className="w-[411px] md:h-[230px] h-[212px] bg-white relative">
                   <div className="w-[71px] h-[71px] bg-[#64EE97] flex items-center justify-center absolute -top-10 left-20">
                     <img src="image/Omicon2.svg" alt="Omicon" />
                   </div>
@@ -104,7 +104,7 @@ const OurMission = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.5 }}
-              className="bg-gradient-to-t from-[#69F79C] to-[#398856] rounded-sm flex items-center gap-5 w-[370px] md:w-[1022px] h-[600px] md:h-[218px] mx-auto p-5 relative top-5 md:-top-5"
+              className="bg-gradient-to-t from-[#69F79C] to-[#398856] rounded-sm flex items-center justify-center gap-5 w-[370px] md:w-[750px] lg:w-[1022px] h-[600px] md:h-[218px] mx-auto p-5 relative top-5 lg:-top-5"
             >
               <div className=" m-25 flex flex-col md:flex-row items-center justify-center gap-5 md:gap-10">
                 {/* USERS */}
@@ -112,10 +112,10 @@ const OurMission = () => {
                   variants={slideUp}
                   onViewportEnter={() => runCount(users, 10)}
                 >
-                  <motion.h4 className="text-[65px] text-white font-bold leading-[100%]">
+                  <motion.h4 className="text-[55px] md:text-[65px] text-white font-bold leading-[100%]">
                     {usersText}
                   </motion.h4>
-                  <p className="text-[23px] text-white font-bold leading-[100%]">
+                  <p className="text-[20px] md:text-[23px] text-white font-bold leading-[100%] text-center">
                     Active Users
                   </p>
                 </motion.div>
@@ -127,10 +127,10 @@ const OurMission = () => {
                   variants={slideUp}
                   onViewportEnter={() => runCount(projects, 500)}
                 >
-                  <motion.h4 className="text-[65px] text-white font-bold leading-[100%]">
+                  <motion.h4 className="text-[55px] md:text-[65px] text-white font-bold leading-[100%]">
                     {projectsText}
                   </motion.h4>
-                  <p className="text-[23px] text-white font-bold leading-[100%]">
+                  <p className="text-[20px] md:text-[23px] text-white font-bold leading-[100%] text-center">
                     Project Completed
                   </p>
                 </motion.div>
@@ -142,10 +142,10 @@ const OurMission = () => {
                   variants={slideUp}
                   onViewportEnter={() => runCount(years, 5)}
                 >
-                  <motion.h4 className="text-[65px] text-white font-bold leading-[100%]">
+                  <motion.h4 className="text-[55px] md:text-[65px] text-white font-bold leading-[100%] text-center">
                     {yearsText}
                   </motion.h4>
-                  <p className="text-[23px] text-white font-bold leading-[100%]">
+                  <p className="text-[20px] md:text-[23px] text-white font-bold leading-[100%] text-center">
                     Years of Partnership
                   </p>
                 </motion.div>
@@ -155,8 +155,8 @@ const OurMission = () => {
         </div>
         {/*Grid */}
         <div>
-          <div className="mt-150 md:mt-0 mx-6  md:m-20 grid grid-cols-1 md:grid-cols-3 gap-10 font-quantico">
-            <div className="w-[385px] md:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
+          <div className="mt-150 md:mt-0 mx-6 md:mx-3 md:m-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 lg:gap-10 font-quantico">
+            <div className="w-full lg:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
               <div className="pt-15">
                 <h4 className="text-[26.41px] font-bold pl-3 ">
                   What Makes Us Different
@@ -174,7 +174,7 @@ const OurMission = () => {
               </div>
             </div>
 
-            <div className="w-[385px] md:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
+            <div className="w-full lg:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
               <div className="pt-15">
                 <h4 className="text-[26.41px] font-bold pl-3 ">
                   Our Approach
@@ -194,7 +194,7 @@ const OurMission = () => {
               </div>
             </div>
 
-            <div className="w-[385px] md:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
+            <div className="w-full md:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
               <div className="pt-15 ">
                 <h4 className="text-[26.41px] font-bold pl-3 ">
                   Who We Work With
@@ -214,7 +214,7 @@ const OurMission = () => {
           </div>
         </div>
         {/* Why Clients Choose Us */}
-        <div className="m-15 md:m-35">
+        <div className="m-8 md:m-18 lg:m-35">
           <div className="text-center font-quantico">
             <h3 className="text-[28.3px] leading-[137%] ">Why Clients Choose </h3>
             <h1 className="text-[#3D9865] text-[30.03px] md:text-[39.03px] font-bold leading-[137%]">THEKWANE TECH LTD </h1>
@@ -223,8 +223,8 @@ const OurMission = () => {
         </div>
         {/* Build Future */}
         <div className="bg-[#58D185C9]/79 w-full h-auto">
-         <div className="text-center font-rammettoOne font-bold p-20 ">
-          <h1 className="leading-[137%] mb-10 text-[24.03px] md:text-[39.03px] ">Let’s Build the Future Together</h1>
+         <div className="text-center font-rammettoOne font-bold p-10 md:p-20 ">
+          <h1 className="leading-[137%] mb-5 md:mb-10 text-[15.03px] md:text-[39.03px] ">Let’s Build the Future Together</h1>
           <button className="px-5 py-2 rounded-full bg-white font-quantico">Get Started</button>
          </div>
         </div>

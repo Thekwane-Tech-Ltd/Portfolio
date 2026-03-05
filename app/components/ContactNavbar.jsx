@@ -22,11 +22,11 @@ const ContactNavbar = () => {
       {/* CONTENT WRAPPER (nav + hero text) */}
       <div className="relative z-10 font-quantico">
         {/* NAVBAR */}
-        <nav className="flex items-center justify-center gap-40 mx-10 p-5 ">
+        <nav className="flex items-center justify-between mx-6 md:mx-10 lg:mx-20 p-5">
           <img src="/image/logo.svg" alt="logo" />
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-8 font-quantico">
+          <ul className="hidden lg:flex items-center gap-8 font-quantico">
             <li className="text-[#64EE97] font-medium text-md">
               <Link href="/">Home</Link>
             </li>
@@ -42,7 +42,7 @@ const ContactNavbar = () => {
           </ul>
 
           {/* Desktop Contact Button */}
-          <div className="hidden md:flex justify-center">
+          <div className="hidden lg:flex justify-center">
             <div>
               <button className="bg-white px-2 rounded-sm"><Link href="/Contact">Contact Us</Link></button>
             </div>
@@ -53,7 +53,7 @@ const ContactNavbar = () => {
 
           {/* Hamburger Button (Mobile) */}
           <button
-            className="md:hidden text-white text-3xl"
+            className="lg:hidden text-white text-3xl"
             onClick={() => setOpen(!open)}
           >
             {open ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
@@ -62,7 +62,7 @@ const ContactNavbar = () => {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden absolute top-[80px] left-0 w-full bg-black/90 backdrop-blur-sm px-10 py-8 space-y-6">
+          <div className="lg:hidden absolute top-[80px] left-0 w-full bg-black/90 backdrop-blur-sm px-10 py-8 space-y-6">
             <ul className="flex flex-col gap-6">
               <li className="text-[#64EE97] text-lg">
                 <Link href="/" onClick={() => setOpen(false)}>
@@ -103,7 +103,7 @@ const ContactNavbar = () => {
             Contact Us
           </button>
 
-          <h1 className="font-rammettoOne font-medium md:font-medium text-white text-[25.02px] md:text-[32.02px] leading-[100%] mb-3">
+          <h1 className="font-rammettoOne font-medium md:font-medium text-white text-[15.02px] md:text-[20.02px] lg:text-[32.02px] leading-[100%] mb-3">
           Get in touch with a trusted  digital agency, software  development company, and blockchain  service provider  .
           </h1>
         </div>

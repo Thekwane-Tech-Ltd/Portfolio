@@ -22,11 +22,11 @@ const PortfolioNavbar  = () => {
       <div className="relative z-10 font-quantico">
 
         {/* NAVBAR */}
-        <nav className="flex items-center justify-center gap-40 mx-10 p-5 ">
+        <nav className="flex items-center justify-between mx-6 md:mx-10 lg:mx-20 p-5">
           <img src="/image/logo.svg" alt="logo" />
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-8 font-quantico">
+          <ul className="hidden lg:flex items-center gap-8 font-quantico">
             <li className="text-[#64EE97] font-medium text-md">
               <Link href="/">Home</Link>
             </li>
@@ -42,7 +42,7 @@ const PortfolioNavbar  = () => {
           </ul>
 
           {/* Desktop Contact Button */}
-          <div className="hidden md:flex justify-center">
+          <div className="hidden lg:flex justify-center">
             <div>
               <button className="bg-white px-2 rounded-sm"><Link href="/Contact">Contact Us</Link></button>
             </div>
@@ -53,7 +53,7 @@ const PortfolioNavbar  = () => {
 
           {/* Hamburger Button (Mobile) */}
           <button
-            className="md:hidden text-white text-3xl"
+            className="lg:hidden text-white text-3xl"
             onClick={() => setOpen(!open)}
           >
             {open ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
@@ -62,7 +62,7 @@ const PortfolioNavbar  = () => {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden absolute top-[80px] left-0 w-full bg-black/90 backdrop-blur-sm px-10 py-8 space-y-6">
+          <div className="lg:hidden absolute top-[80px] left-0 w-full bg-black/90 backdrop-blur-sm px-10 py-8 space-y-6">
             <ul className="flex flex-col gap-6">
               <li className="text-[#64EE97] text-lg">
                 <Link href="/" onClick={() => setOpen(false)}>Home</Link>
@@ -89,11 +89,11 @@ const PortfolioNavbar  = () => {
 
         {/* HERO TEXT */}
         <div className="mx-10 my-15 md:mx-40 md:my-20 text-center">
-          <button className="border border-white px-8 py-3 md:px-3 md:py-2 text-white text-[18px] md:text-[22px] leading-[100%] rounded-full mb-10 font-quantico">
+          <button className="border border-white px-8 py-3 lg:px-3 lg:py-2 text-white text-[18px] md:text-[22px] leading-[100%] rounded-full mb-10 font-quantico">
            Our Portfolio
           </button>
 
-          <h1 className="font-rammettoOne font-medium md:font-bold text-white text-[15px] md:text-[30px] leading-[100%] mb-3">
+          <h1 className="font-rammettoOne font-medium lg:font-bold text-white text-[13px] md:text-[15px] lg:text-[30px] leading-[100%] mb-3">
            Explore our portfolio of  web applications, mobile  apps, blockchain projects, bots, software  systems, and animation work  delivered for global clients.
           </h1>
         </div>

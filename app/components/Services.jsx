@@ -139,18 +139,19 @@ const Services = () => {
       <div
         ref={sectionRef}
         className="
-          grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+          flex flex-col md:flex-row flex-wrap
+          items-center justify-center
           my-8
-          px-4 sm:px-8 md:px-20
-          gap-8 gap-y-30 sm:gap-y-25 md:gap-y-20 "
+          px-4 sm:px-4 md:px-5 lg:px-5
+          gap-8 gap-y-30 sm:gap-y-25 lg:gap-y-20 "
       >
         {servicesData.slice(0, 6).map((service, index) => (
           <div
             key={index}
             className="
               service-card opacity-0 translate-y-12
-              w-full md:w-[382px]
-              h-auto md:h-[680px]
+              w-full lg:w-[382px]
+              h-auto lg:h-[680px]
               bg-[#FFFFFF] shadow-lg p-5 rounded-lg
               transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
               hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02] group
@@ -191,8 +192,8 @@ const Services = () => {
             <div
               key={index}
               className="
-                w-full sm:w-[382px]
-                h-auto md:h-[680px]
+                w-full lg:w-[385px]
+                h-auto lg:h-[720px]
                 bg-[#FFFFFF] shadow-lg p-5 rounded-lg
                 transition-all duration-500 ease-out
                 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02] group

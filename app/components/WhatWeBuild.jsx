@@ -17,7 +17,7 @@ const WhatWeBuild = () => {
       title: "Mobile Banking App",
       description:
         "Secure banking application with biometric authentication",
-      image: "/image/Portfolioimg1.svg",
+      image: "/image/portfolioimg2.svg",
       category: "Mobile App",
       tags: ["React Native", "Firebase", "Biometrics"],
     },
@@ -36,11 +36,18 @@ const WhatWeBuild = () => {
       tags: ["Blender", "Unity"],
     },
     {
+      title: "Disney-pixar",
+      description: "3d-Animation-video-disney-pixar",
+      image: "/image/Portfolioimg5.svg",
+      category: "VRChat",
+      tags: ["After Effects", "Cinema 4D", "Illustrator"],
+    },
+    {
       title: "Pixar Disney Animation",
       description: "2d animated short",
       image: "/image/Portfolioimg6.svg",
       category: "VRChat",
-      tags: ["Unity", "VRChat SDK"],
+      tags: ["blender","Unity", "VRChat SDK"],
     },
   ];
 
@@ -93,7 +100,7 @@ const WhatWeBuild = () => {
       </div>
 
       {/* PROJECT GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 px-6 md:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mt-16 px-6 md:px-10 lg:px-20">
         {filteredProjects.map((project, index) => (
           <div
             key={index}

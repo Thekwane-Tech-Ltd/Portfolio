@@ -5,10 +5,10 @@ import { IoLocationSharp } from "react-icons/io5";
 const ContactUs = () => {
   return (
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 m-6 md:m-20 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 m-6 md:m-10 lg:m-20 items-start">
   
   {/* FORM CARD */}
-  <div className="w-full max-w-[500px] mx-auto md:mx-0 bg-white shadow-xl rounded-xl font-quantico">
+  <div className="w-full lg:max-w-[500px] mx-auto md:mx-0 bg-white shadow-xl rounded-xl font-quantico">
     <div className="w-full p-6 md:p-8">
       <h2 className="text-[19.96px] font-medium mb-3">Contact Us</h2>
       <p className="text-[32px] md:text-[40.63px] font-bold leading-[100%] mb-6">
