@@ -46,7 +46,7 @@ const Hero = () => {
             <img src="/image/logo.svg" alt="logo" />
 
             {/* Desktop Nav (UNCHANGED) */}
-            <ul className="hidden md:flex items-center gap-8 font-quantico">
+            <ul className="hidden lg:flex items-center gap-8 font-quantico">
               <li className="text-[#64EE97] font-medium text-md"><Link href="/">Home</Link></li>
               <li className="text-[#64EE97] font-medium text-md"><Link href="/Service">Services</Link></li>
               <li className="text-[#64EE97] font-medium text-md"><Link href="/Portfolio">Portfolio</Link></li>
@@ -55,7 +55,7 @@ const Hero = () => {
 
             {/* Hamburger (ONLY small screens) */}
             <button
-              className="md:hidden text-white text-3xl"
+              className="lg:hidden text-white text-3xl"
               onClick={() => setOpen(!open)}
             >
               {open ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
@@ -64,7 +64,7 @@ const Hero = () => {
 
           {/* Mobile Menu */}
           {open && (
-            <div className="md:hidden absolute top-20 left-0 w-full bg-black/90 p-8 space-y-6 z-50">
+            <div className="lg:hidden absolute top-20 left-0 w-full bg-black/90 p-8 space-y-6 z-50">
               <ul className="flex flex-col gap-6 font-quantico">
                 <li className="text-[#64EE97]"><Link href="/">Home</Link></li>
                 <li className="text-[#64EE97]"><Link href="/Service">Services</Link></li>
@@ -112,7 +112,7 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             transition={{ staggerChildren: 0.3 }}
-            className="flex flex-col md:flex-row items-start md:items-center gap-5 ml-7 md:ml-17 mt-5"
+            className="flex flex-col lg:flex-row items-start md:items-center gap-5 ml-7 md:ml-17 mt-5"
           >
             <motion.button variants={slideDown} className="bg-[#64EB95] py-2 px-3 flex items-center gap-2">
               Request a
@@ -127,12 +127,12 @@ const Hero = () => {
           </motion.div>
 
           {/* LINE (hide on small to prevent overflow) */}
-          <div className=" ml-10 md:ml-90 mt-5">
+          <div className=" ml-10 md:ml-20 lg:ml-90 mt-5">
             <img src="image/Hline.svg" alt="Hline" />
           </div>
 
           {/* IMAGE (absolute only on desktop) */}
-          <div className="hidden md:block absolute bottom-0 -right-60">
+          <div className="hidden lg:block absolute bottom-0 -right-60">
             <img
               src="image/cyberboy.svg"
               alt="cyberpunkboyillustration"
@@ -141,7 +141,7 @@ const Hero = () => {
           </div>
 
           {/* MOBILE IMAGE (inside flow) */}
-          <div className="md:hidden mt-10 absolute top-129">
+          <div className="lg:hidden mt-10 absolute top-129">
             <img
               src="image/cyberboy.svg"
               alt="cyberpunkboyillustration"
@@ -170,7 +170,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section (Desktop ONLY) */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="bg-gradient-to-b from-[#69F79C] to-[#001219] h-[842px] pt-5 font-quantico">
             <div className="flex justify-center">
               <div>
@@ -194,7 +194,7 @@ const Hero = () => {
       </div>
 
       {/* Mobile Bottom Section (NO Contact Button) */}
-      <div className="md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-45 text-center font-quantico ">
+      <div className="lg:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-45 text-center font-quantico ">
         <p className="font-medium text-white text-lg leading-[100%] absolute top-138 left-45">
           Impowering industries <br />
           with next-Gen Tech

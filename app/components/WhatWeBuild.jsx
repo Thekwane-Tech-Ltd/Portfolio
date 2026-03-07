@@ -1,9 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { LuDot } from "react-icons/lu";
 
 const WhatWeBuild = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+
+  // store video refs in an array
+  const videoRefs = useRef([]);
 
   const projects = [
     {
@@ -24,7 +27,8 @@ const WhatWeBuild = () => {
     {
       title: "2D Japanese Animation",
       description: "2d anime animation",
-      image: "/image/Portfolioimg3.svg",
+      image: "/image/Portfolioimg3.svg", // preview 
+      video: "/image/videos/2djapanseanimations.mp4",
       category: "Animation",
       tags: ["Blender", "Illustrator", "After Effects"],
     },
@@ -39,6 +43,7 @@ const WhatWeBuild = () => {
       title: "Disney-pixar",
       description: "3d-Animation-video-disney-pixar",
       image: "/image/Portfolioimg5.svg",
+      video: "/image/videos/disneypixaranimation.mp4",
       category: "VRChat",
       tags: ["After Effects", "Cinema 4D", "Illustrator"],
     },
@@ -46,6 +51,7 @@ const WhatWeBuild = () => {
       title: "Pixar Disney Animation",
       description: "2d animated short",
       image: "/image/Portfolioimg6.svg",
+      video: "/image/videos/pixardisneyanimation.mp4",
       category: "VRChat",
       tags: ["blender","Unity", "VRChat SDK"],
     },
@@ -70,13 +76,11 @@ const WhatWeBuild = () => {
 
   return (
     <div className="my-20 font-quantico">
-
       {/* HEADER */}
       <div className="text-center">
         <button className="border border-black px-3 py-2 text-[22px] rounded-full mb-6">
           What We Build
         </button>
-
         <p className="text-[23px]">
           Explore our latest projects and creative solutions
         </p>
@@ -88,9 +92,7 @@ const WhatWeBuild = () => {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 text-sm rounded-sm shadow-lg transition ${
-                activeCategory === category
-                  ? "bg-[#64EE97]"
-                  : "bg-white"
+                activeCategory === category ? "bg-[#64EE97]" : "bg-white"
               }`}
             >
               {category}
@@ -100,22 +102,49 @@ const WhatWeBuild = () => {
       </div>
 
       {/* PROJECT GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mt-16 px-6 md:px-10 lg:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 px-6 md:px-10 lg:px-20">
         {filteredProjects.map((project, index) => (
           <div
             key={index}
-            className="bg-black rounded-b-md overflow-hidden"
+            className="bg-black rounded-b-md overflow-hidden group"
           >
-            <img src={project.image} alt="portfolio" />
+            {/* VIDEO / IMAGE HOVER */}
+            <div className="relative w-full h-[220px] md:h-[260px] lg:h-[280px]">
+              {project.video ? (
+                <>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+                  />
+                  <video
+                    ref={(el) => (videoRefs.current[index] = el)}
+                    src={project.video}
+                    controls={true}
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 "
+                    onMouseEnter={() => videoRefs.current[index]?.play()}
+                    onMouseLeave={() => videoRefs.current[index]?.pause()}
+                  />
+                </>
+              ) : (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
 
+            {/* INFO */}
             <div className="p-5">
               <h1 className="font-bold text-white text-[24px] mb-3">
                 {project.title}
               </h1>
-
-              <p className="text-white mb-5 text-sm">
-                {project.description}
-              </p>
+              <p className="text-white mb-5 text-sm">{project.description}</p>
 
               <div className="flex flex-wrap gap-3">
                 {project.tags.map((tag, i) => (
