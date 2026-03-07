@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { LuDot } from "react-icons/lu";
 
 const WhatWeBuild = () => {
@@ -7,6 +7,16 @@ const WhatWeBuild = () => {
 
   // store video refs in an array
   const videoRefs = useRef([]);
+
+  // Detect if device is mobile
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
 
   const projects = [
     {
@@ -73,6 +83,14 @@ const WhatWeBuild = () => {
       : projects.filter(
           (project) => project.category === activeCategory
         );
+      
+
+          const handleVideoToggle = (index) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
+    if (video.paused) video.play();
+    else video.pause();
+  };
 
   return (
     <div className="my-20 font-quantico">
@@ -109,7 +127,9 @@ const WhatWeBuild = () => {
             className="bg-black rounded-b-md overflow-hidden group"
           >
             {/* VIDEO / IMAGE HOVER */}
-            <div className="relative w-full h-[220px] md:h-[260px] lg:h-[280px]">
+            <div className="relative w-full h-[220px] md:h-[260px] lg:h-[280px]"
+            onClick={() => isMobile && handleVideoToggle(index)}
+            >
               {project.video ? (
                 <>
                   <img
@@ -126,8 +146,8 @@ const WhatWeBuild = () => {
                     playsInline
                     preload="auto"
                     className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 "
-                    onMouseEnter={() => videoRefs.current[index]?.play()}
-                    onMouseLeave={() => videoRefs.current[index]?.pause()}
+                    onMouseEnter={() => !isMobile && videoRefs.current[index]?.play()}
+                    onMouseLeave={() => !isMobile && videoRefs.current[index]?.pause()}
                   />
                 </>
               ) : (
