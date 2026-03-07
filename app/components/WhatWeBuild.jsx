@@ -4,19 +4,15 @@ import { LuDot } from "react-icons/lu";
 
 const WhatWeBuild = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-
-  // store video refs in an array
   const videoRefs = useRef([]);
-
-  // Detect if device is mobile
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
 
   const projects = [
     {
@@ -37,7 +33,7 @@ const WhatWeBuild = () => {
     {
       title: "2D Japanese Animation",
       description: "2d anime animation",
-      image: "/image/Portfolioimg3.svg", // preview 
+      image: "/image/Portfolioimg3.svg",
       video: "/image/videos/2djapanseanimations.mp4",
       category: "Animation",
       tags: ["Blender", "Illustrator", "After Effects"],
@@ -63,7 +59,7 @@ const WhatWeBuild = () => {
       image: "/image/Portfolioimg6.svg",
       video: "/image/videos/pixardisneyanimation.mp4",
       category: "VRChat",
-      tags: ["blender","Unity", "VRChat SDK"],
+      tags: ["blender", "Unity", "VRChat SDK"],
     },
   ];
 
@@ -83,9 +79,8 @@ const WhatWeBuild = () => {
       : projects.filter(
           (project) => project.category === activeCategory
         );
-      
 
-          const handleVideoToggle = (index) => {
+  const handleVideoToggle = (index) => {
     const video = videoRefs.current[index];
     if (!video) return;
     if (video.paused) video.play();
@@ -127,30 +122,49 @@ const WhatWeBuild = () => {
             className="bg-black rounded-b-md overflow-hidden group"
           >
             {/* VIDEO / IMAGE HOVER */}
-            <div className="relative w-full h-[220px] md:h-[260px] lg:h-[280px]"
-            onClick={() => isMobile && handleVideoToggle(index)}
+            <div
+              className="relative w-full h-[220px] md:h-[260px] lg:h-[280px]"
+              onClick={() => isMobile && project.video && handleVideoToggle(index)}
             >
               {project.video ? (
-                <>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-                  />
+                isMobile ? (
+                  // Mobile: show video directly with controls
                   <video
-                    ref={(el) => (videoRefs.current[index] = el)}
                     src={project.video}
-                    controls={true}
+                    controls
                     muted
                     loop
                     playsInline
                     preload="auto"
-                    className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 "
-                    onMouseEnter={() => !isMobile && videoRefs.current[index]?.play()}
-                    onMouseLeave={() => !isMobile && videoRefs.current[index]?.pause()}
+                    className="w-full h-full object-cover"
                   />
-                </>
+                ) : (
+                  // Desktop: hover effect with preview image
+                  <>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+                    />
+                    <video
+                      ref={(el) => (videoRefs.current[index] = el)}
+                      src={project.video}
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      onMouseEnter={() =>
+                        videoRefs.current[index]?.play()
+                      }
+                      onMouseLeave={() =>
+                        videoRefs.current[index]?.pause()
+                      }
+                    />
+                  </>
+                )
               ) : (
+                // Projects without video: just show image
                 <img
                   src={project.image}
                   alt={project.title}
