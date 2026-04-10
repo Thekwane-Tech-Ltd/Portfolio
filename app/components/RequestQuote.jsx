@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 const RequestQuote = () => {
   const slideDown = {
     hidden: { opacity: 0, y: -80 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const staggerContainer = {
@@ -16,6 +20,9 @@ const RequestQuote = () => {
       },
     },
   };
+
+  const message =
+    "Hi i would like to request a quote for my project and discuss my ideas.";
 
   return (
     <div className="relative">
@@ -34,7 +41,8 @@ const RequestQuote = () => {
           className="font-questrial text-[15px] md:text-[33.07px] font-medium leading-[130%] text-white mb-5"
           variants={slideDown}
         >
-          Looking for a reliable software and blockchain development company?{" "}
+          Looking for a reliable software and blockchain development
+          company?{" "}
         </motion.h4>
 
         <motion.p
@@ -44,14 +52,20 @@ const RequestQuote = () => {
           Let’s build your next digital solution.
         </motion.p>
 
-        <motion.button
-          className="font-rasa text-[14px] md:text-[24.78px] font-medium px-2 md:px-5 py-1 bg-[#64EE97] text-[#070E14] rounded-full"
-          variants={slideDown}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
+        <a
+          href={`https://wa.me/2349030933281?text=${encodeURIComponent(message)}`}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Request a Quote
-        </motion.button>
+          <motion.button
+            className="font-rasa text-[14px] md:text-[24.78px] font-medium px-2 md:px-5 py-1 bg-[#64EE97] text-[#070E14] rounded-full"
+            variants={slideDown}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            Request a Quote
+          </motion.button>
+        </a>
       </motion.div>
     </div>
   );

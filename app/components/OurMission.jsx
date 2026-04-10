@@ -21,6 +21,9 @@ const OurMission = () => {
     animate(mv, end, { duration, ease: "easeOut" });
   };
 
+  const getStartedBtn =
+    "Hi, I’d like to get started on a project and discuss my ideas.";
+
   return (
     <section>
       <div>
@@ -51,7 +54,7 @@ const OurMission = () => {
           {/* body */}
           <div className="relative z-10 font-quantico">
             <div>
-              <div className="p-5 md:p-10 text-white flex items-center font-bold text-[17.58px] leading-[108%]">
+              <div className="p-5 lg:p-5 text-white flex items-center font-bold text-[17.58px] leading-[108%]">
                 <h4>OUR MISSION & VISION</h4>
                 <img src="/image/Omline.svg" alt="line" />
               </div>
@@ -155,7 +158,7 @@ const OurMission = () => {
         </div>
         {/*Grid */}
         <div>
-          <div className="mt-150 md:mt-0 mx-6 md:mx-3 md:m-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 lg:gap-10 font-quantico">
+          <div className="mt-150 md:mt-0 mx-6 md:mx-3 lg:m-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 lg:gap-10 font-quantico">
             <div className="w-full lg:w-[385px] h-[544px] bg-white rounded-[29.29px] shadow-lg">
               <div className="pt-15">
                 <h4 className="text-[26.41px] font-bold pl-3 ">
@@ -225,7 +228,14 @@ const OurMission = () => {
         <div className="bg-[#58D185C9]/79 w-full h-auto">
          <div className="text-center font-rammettoOne font-bold p-10 md:p-20 ">
           <h1 className="leading-[137%] mb-5 md:mb-10 text-[15.03px] md:text-[39.03px] ">Let’s Build the Future Together</h1>
-          <button className="px-5 py-2 rounded-full bg-white font-quantico">Get Started</button>
+          <a
+                href={`https://wa.me/2349030933281?text=${encodeURIComponent(getStartedBtn)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="px-5 py-2 rounded-full bg-white font-quantico">Get Started</button>
+              </a>
+          
          </div>
         </div>
       </div>

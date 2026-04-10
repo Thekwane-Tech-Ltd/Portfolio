@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Quantico as QuanticoFont, Questrial as QuestrialFont, Rasa as RasaFont, Rammetto_One as RammettoOneFont, Inter as InterFont, Racing_Sans_One as RacingSansOneFont, Montserrat as MontserratFont } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import { Toaster } from 'react-hot-toast';
 
 const Quantico = QuanticoFont({
   variable: "--font-quantico",
@@ -61,6 +62,7 @@ export default function RootLayout({
         className={`${Quantico.variable} ${Questrial.variable} ${Rasa.variable} ${RammettoOne.variable} ${Inter.variable} ${Racing_Sans_One.variable} ${Montserrat.variable}  antialiased overflow-x-hidden`}
       >
         {children}
+        <Toaster position="top-right" reverseOrder={false} />
         <Footer />
       </body>
     </html>

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 
@@ -54,7 +55,7 @@ const CTA = () => {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          Contact Us 
+          <Link href="/Contact">Contact Us</Link>
         </motion.button>
       </motion.div>
     </div>

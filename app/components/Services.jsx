@@ -27,6 +27,9 @@ const Services = () => {
   }, []);
 
 
+  const startYourProjectBtn = "Hi, I’m interested in starting a project with THEKWANE TECH LTD. Can we discuss my ideas and get a quote?";
+
+
   const servicesData = [
   {
     img: "/image/serviceimg1.svg",
@@ -180,9 +183,17 @@ const Services = () => {
               ))}
             </div>
 
-            <button className="text-center bg-[#64EE97] py-2 px-3 text-[18px] md:text-[22px] rounded-md font-quantico mx-auto block mt-6 transition-all duration-300 hover:bg-[#176634] hover:text-white">
+            <a
+                href={`https://wa.me/2349030933281?text=${encodeURIComponent(startYourProjectBtn)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-center bg-[#64EE97] py-2 px-3 text-[18px] md:text-[22px] rounded-md font-quantico mx-auto block mt-6 transition-all duration-300 hover:bg-[#176634] hover:text-white">
               Start your project
             </button>
+              </a>
+
+            
           </div>
         ))}
 

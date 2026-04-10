@@ -66,8 +66,8 @@ const containerVariants = {
 const cardVariants = {
   hidden: {
     opacity: 0,
-    y: 80,        // stronger movement
-    scale: 0.95,  // subtle pop
+    y: 80, // stronger movement
+    scale: 0.95, // subtle pop
   },
   visible: {
     opacity: 1,
@@ -81,12 +81,13 @@ const cardVariants = {
   },
 };
 
-
 const CoreServices = () => {
+  const getStartedBtn =
+    "Hi, I’d like to get started on a project and discuss my ideas.";
+
   return (
     <section>
       <div className="mx-1 lg:mx-17 my-10 p-6 lg:p-10 font-quantico">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -99,7 +100,8 @@ const CoreServices = () => {
             OUR CORE SERVICES
           </button>
           <p className="text-[20px] font-medium mt-2">
-            We offer comprehensive digital solutions to bring your vision to life
+            We offer comprehensive digital solutions to bring your vision to
+            life
           </p>
         </motion.div>
 
@@ -146,8 +148,13 @@ const CoreServices = () => {
                 {service.description}
               </p>
 
-              <button
-                className="
+              <a
+                href={`https://wa.me/2349030933281?text=${encodeURIComponent(getStartedBtn)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  className="
                   bg-[#64EE97]
                   text-black
                   text-[12.44px]
@@ -162,13 +169,13 @@ const CoreServices = () => {
                   hover:text-[#64EE97]
                   hover:scale-105
                 "
-              >
-                GET STARTED
-              </button>
+                >
+                  GET STARTED
+                </button>
+              </a>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );
