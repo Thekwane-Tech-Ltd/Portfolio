@@ -26,6 +26,14 @@ const WhatWeBuild = () => {
       links: " ",
     },
     {
+      title: "Digitaltrvst",
+      description: "Digitaltrvst website",
+      image: "/image/Portfolioimg1.svg",
+      category: "Web Development",
+      tags: ["React", "Node.js", "MongoDB"],
+      links: " https://www.digitaltrvst.com/ ",
+    },
+    {
       title: "Mobile Banking App",
       description: "Secure banking application with biometric authentication",
       image: "/image/portfolioimg2.svg",
@@ -39,7 +47,7 @@ const WhatWeBuild = () => {
       image: "/image/portfolioimg2.svg",
       category: "Mobile App",
       tags: ["React Native", "Firebase", "Biometrics"],
-      links: " https://www.digitaltrvst.com/ ",
+      links: " https://play.google.com/store/apps/details?id=com.afo.digitalmoney&pcampaignid=web_share ",
     },
     {
       title: "2D Japanese Animation",
