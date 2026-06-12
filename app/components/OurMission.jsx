@@ -32,12 +32,11 @@ const OurMission = () => {
           <h1 className="font-bold text-[15.53px]  md:text-[30.53px] leading-[108%]">
             THEKWANE TECH LTD{" "}
             <span className="font-medium">
-              is a modern digital agency and software development company
-              providing web development, mobile app development, blockchain
-              solutions, game development, bot creation, and animation services
-              to clients globally. We are not a one-man operation. We operate as
-              a collaborative team of developers, designers, reliable and
-              scalable digital solutions.
+              is a global digital agency and software development company dedicated to helping businesses innovate, grow, and succeed in the digital age. We bring together expert developers, designers, animators, and strategists to create world-class websites, mobile applications, blockchain solutions, AI-powered systems, games, product animations, explainer videos, and immersive digital experiences.
+              <br />
+              <br />
+              Our mission is simple: to transform complex ideas into powerful solutions that captivate audiences, solve real business challenges, and create lasting value. Through a combination of cutting-edge technology, creative excellence, and strategic thinking, we help brands stand out and thrive in an increasingly competitive digital landscape.
+
             </span>
           </h1>
         </div>

@@ -40,7 +40,7 @@ const About = () => {
 
   return (
    <section>
-  <div className="mx-4 md:mx-17 my-5 md:my-20 p-5 md:p-10 font-quantico">
+  <div className="mx-2 md:mx-5 lg:mx-17 my-15 md:my-20 p-5 md:p-10 font-quantico">
 
     <div className="flex flex-col md:flex-row items-start justify-center gap-10">
 
@@ -79,7 +79,7 @@ const About = () => {
 
         <motion.h5
           variants={slideRight}
-          className="font-bold text-[20px] md:text-[32.31px] text-[#3D9865] leading-[110%] mt-5"
+          className="font-bold text-[20px] md:text-[25px] lg:text-[32.31px] text-[#3D9865] leading-[110%] mt-5"
         >
           THEKWANE TECH LTD{" "}
           <span className="text-[#000000]">
@@ -92,14 +92,14 @@ const About = () => {
 
         <motion.p
           variants={slideRight}
-          className="font-md text-[13px] md:text-[20px] leading-[145%] mt-3"
+          className="font-md text-[13px] md:text-[20px] lg:text-[20px] leading-[145%] mt-3"
         >
           We design and develop web apps, mobile applications,
-          <br className="hidden md:block" />
+          <br className="hidden md:hidden" />
           blockchain systems, automated bots, game development and
-          <br className="hidden md:block" />
+          <br className="hidden md:hidden" />
           animated content that help businesses increase efficiency,
-          <br className="hidden md:block" />
+          <br className="hidden md:hidden" />
           user engagement, and revenue.
         </motion.p>
       </motion.div>
@@ -119,7 +119,7 @@ const About = () => {
         flex flex-col md:flex-row
         items-center
         gap-2 md:gap-5
-        w-full md:w-[1022px]
+        w-full md:w-[800px] lg:w-[1022px]
         h-auto md:h-[218px]
         mx-auto
         p-6 md:p-5
@@ -137,7 +137,7 @@ const About = () => {
           rounded-t-xl
           p-5
           relative
-          bottom-20
+          bottom-10
           md:-top-15
         "
       >

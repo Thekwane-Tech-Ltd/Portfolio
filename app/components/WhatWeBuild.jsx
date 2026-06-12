@@ -1,6 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { LuDot } from "react-icons/lu";
+import { GoArrowUpRight } from "react-icons/go";
+import Link from "next/link";
 
 const WhatWeBuild = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -21,14 +23,23 @@ const WhatWeBuild = () => {
       image: "/image/Portfolioimg1.svg",
       category: "Web Development",
       tags: ["React", "Node.js", "MongoDB"],
+      links: " ",
     },
     {
       title: "Mobile Banking App",
-      description:
-        "Secure banking application with biometric authentication",
+      description: "Secure banking application with biometric authentication",
       image: "/image/portfolioimg2.svg",
       category: "Mobile App",
       tags: ["React Native", "Firebase", "Biometrics"],
+      links: " ",
+    },
+    {
+      title: "Digitaltrvst App",
+      description: "Secure banking application with biometric authentication",
+      image: "/image/portfolioimg2.svg",
+      category: "Mobile App",
+      tags: ["React Native", "Firebase", "Biometrics"],
+      links: " https://www.digitaltrvst.com/ ",
     },
     {
       title: "2D Japanese Animation",
@@ -37,6 +48,7 @@ const WhatWeBuild = () => {
       video: "/image/videos/2djapanseanimations.mp4",
       category: "Animation",
       tags: ["Blender", "Illustrator", "After Effects"],
+      links: " ",
     },
     {
       title: "3D Character Model",
@@ -44,22 +56,25 @@ const WhatWeBuild = () => {
       image: "/image/Portfolioimg4.svg",
       category: "3D Modeling",
       tags: ["Blender", "Unity"],
+      links: " ",
     },
     {
       title: "Disney-pixar",
       description: "3d-Animation-video-disney-pixar",
       image: "/image/Portfolioimg5.svg",
       video: "/image/videos/disneypixaranimation.mp4",
-      category: "VRChat",
+      category: "Animation",
       tags: ["After Effects", "Cinema 4D", "Illustrator"],
+      links: " ",
     },
     {
       title: "Pixar Disney Animation",
       description: "2d animated short",
       image: "/image/Portfolioimg6.svg",
       video: "/image/videos/pixardisneyanimation.mp4",
-      category: "VRChat",
+      category: "Animation",
       tags: ["blender", "Unity", "VRChat SDK"],
+      links: " ",
     },
   ];
 
@@ -70,15 +85,13 @@ const WhatWeBuild = () => {
     "Blockchain",
     "3D Modeling",
     "Animation",
-    "VRChat",
+    // "VRChat",
   ];
 
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter(
-          (project) => project.category === activeCategory
-        );
+      : projects.filter((project) => project.category === activeCategory);
 
   const handleVideoToggle = (index) => {
     const video = videoRefs.current[index];
@@ -124,7 +137,9 @@ const WhatWeBuild = () => {
             {/* VIDEO / IMAGE HOVER */}
             <div
               className="relative w-full h-[220px] md:h-[260px] lg:h-[280px]"
-              onClick={() => isMobile && project.video && handleVideoToggle(index)}
+              onClick={() =>
+                isMobile && project.video && handleVideoToggle(index)
+              }
             >
               {project.video ? (
                 isMobile ? (
@@ -154,12 +169,8 @@ const WhatWeBuild = () => {
                       playsInline
                       preload="auto"
                       className="absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      onMouseEnter={() =>
-                        videoRefs.current[index]?.play()
-                      }
-                      onMouseLeave={() =>
-                        videoRefs.current[index]?.pause()
-                      }
+                      onMouseEnter={() => videoRefs.current[index]?.play()}
+                      onMouseLeave={() => videoRefs.current[index]?.pause()}
                     />
                   </>
                 )
@@ -175,9 +186,20 @@ const WhatWeBuild = () => {
 
             {/* INFO */}
             <div className="p-5">
-              <h1 className="font-bold text-white text-[24px] mb-3">
+              <div className="flex gap-3">
+                <h1 className="font-bold text-white text-[24px] mb-3">
                 {project.title}
               </h1>
+
+              <Link
+                href={project.links}
+                target="_blank"
+                className="w-5 h-5 bg-[#1B1B1B] rounded-full flex items-center justify-center mt-2"
+              >
+                <GoArrowUpRight className="text-white" />
+              </Link>
+              </div>
+
               <p className="text-white mb-5 text-sm">{project.description}</p>
 
               <div className="flex flex-wrap gap-3">

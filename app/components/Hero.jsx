@@ -44,11 +44,11 @@ const Hero = () => {
         {/* Left Section */}
         <div className="col-span-3 bg-[#001219] pt-5 pb-60 relative">
           {/* NAV */}
-          <nav className="flex items-center justify-between ml-11 mr-11">
+          <nav className="flex items-center justify-between ml-11 md:ml-5 lg:ml-11 mr-11 md:mr-5 lg:mr-11">
             <img src="/image/logo.svg" alt="logo" />
 
             {/* Desktop Nav (UNCHANGED) */}
-            <ul className="hidden lg:flex items-center gap-8 font-quantico">
+            <ul className="hidden md:flex items-center gap-8 font-quantico">
               <li className="text-[#64EE97] font-medium text-md">
                 <Link href="/">Home</Link>
               </li>
@@ -65,7 +65,7 @@ const Hero = () => {
 
             {/* Hamburger (ONLY small screens) */}
             <button
-              className="lg:hidden text-white text-3xl"
+              className="lg:hidden md:hidden text-white text-3xl"
               onClick={() => setOpen(!open)}
             >
               {open ? <HiOutlineX /> : <HiOutlineMenuAlt3 />}
@@ -74,7 +74,7 @@ const Hero = () => {
 
           {/* Mobile Menu */}
           {open && (
-            <div className="lg:hidden absolute top-20 left-0 w-full bg-black/90 p-8 space-y-6 z-50">
+            <div className="lg:hidden md:hidden absolute top-20 left-0 w-full bg-black/90 p-8 space-y-6 z-50">
               <ul className="flex flex-col gap-6 font-quantico">
                 <li className="text-[#64EE97]">
                   <Link href="/">Home</Link>
@@ -110,28 +110,28 @@ const Hero = () => {
           >
             <motion.h1
               variants={slideDown}
-              className="text-[#64EB95] font-bold text-[20px] md:text-[39.61px] leading-[100%]"
+              className="text-[#64EB95] font-bold text-[20px] md:text-[29.61px] lg:text-[39.61px] leading-[100%]"
             >
-              BRINGING IDEAS TO LIFE THROUGH
+              TURNING IDEAS INTO
             </motion.h1>
 
             <motion.h2
               variants={slideDown}
-              className="font-bold text-[29px] md:text-[63.08px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent"
+              className="font-bold text-[20px] md:text-[30.08px] lg:text-[60.08px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent"
             >
-              SOFTWARE INNOVATIVE
+              POWERFUL DIGITAL PRODUCTS
             </motion.h2>
 
             <motion.h3
               variants={slideDown}
-              className="font-bold text-[36px] md:text-[101.14px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent"
+              className="font-bold text-[30px] md:text-[40.14px] lg:text-[80.14px] leading-[100%] bg-gradient-to-r from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent"
             >
-              & 3D ANIMATION
+              & STUNNING VISUAL EXPERIENCES
             </motion.h3>
 
             <motion.p
               variants={slideDown}
-              className="font-md text-[18px] md:text-[24px] leading-6 mt-5 text-[#FFFFFF]"
+              className="font-md text-[17px] md:text-[24px] leading-6 mt-5 text-[#FFFFFF]"
             >
               We build immersive visuals and scalable <br />
               software, all tailored to help your brand stand out.
@@ -144,7 +144,7 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             transition={{ staggerChildren: 0.3 }}
-            className="flex flex-col lg:flex-row items-start md:items-center gap-5 ml-7 md:ml-17 mt-5"
+            className="flex flex-col md:flex-row items-start md:items-center gap-5 ml-7 md:ml-17 mt-5"
           >
             <a
               href={`https://wa.me/2349030933281?text=${encodeURIComponent(message)}`}
@@ -161,22 +161,22 @@ const Hero = () => {
               </motion.button>
             </a>
 
-            <motion.button
+            {/* <motion.button
               variants={slideDown}
               className="bg-[#64EB95] py-2 px-3 flex items-center gap-2"
             >
               <Link href="/Portfolio">View Our Portfolio</Link>
               <GoArrowUpRight />
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           {/* LINE (hide on small to prevent overflow) */}
-          <div className=" ml-10 md:ml-20 lg:ml-90 mt-5">
+          <div className=" ml-10 md:ml-20 lg:ml-30 mt-3">
             <img src="image/Hline.svg" alt="Hline" />
           </div>
 
           {/* IMAGE (absolute only on desktop) */}
-          <div className="hidden lg:block absolute bottom-0 -right-60">
+          <div className="hidden md:block absolute bottom-0 -right-60">
             <img
               src="image/cyberboy.svg"
               alt="cyberpunkboyillustration"
@@ -185,11 +185,11 @@ const Hero = () => {
           </div>
 
           {/* MOBILE IMAGE (inside flow) */}
-          <div className="lg:hidden mt-10 absolute top-129">
+          <div className="lg:hidden md:hidden mt-10 absolute top-100">
             <img
               src="image/cyberboy.svg"
               alt="cyberpunkboyillustration"
-              className="w-74"
+              className="w-84"
             />
           </div>
 
@@ -200,7 +200,7 @@ const Hero = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={slideUp}
-            className="flex bg-[#414141]/50 w-[350px] md:w-[598px] h-[87px] md:h-[97px] items-center gap-5 p-5 font-quantico absolute -bottom-33 right-4 md:bottom-10 md:-right-60"
+            className="flex bg-[#414141]/50 w-[350px] md:w-[598px] h-[87px] md:h-[97px] items-center gap-5 p-5 font-quantico absolute -bottom-33 right-4 md:bottom-10 md:-right-40 lg:-right-60"
           >
             <div>
               <h4 className="text-[#64EE97] text-4xl md:text-5xl font-bold">
@@ -219,8 +219,8 @@ const Hero = () => {
         </div>
 
         {/* Right Section (Desktop ONLY) */}
-        <div className="hidden lg:block">
-          <div className="bg-gradient-to-b from-[#69F79C] to-[#001219] h-[842px] pt-10 font-quantico">
+        <div className="hidden md:block">
+          <div className="bg-gradient-to-b from-[#69F79C] to-[#001219] md:h-[1115px] lg:h-[900px] pt-10 font-quantico">
             <div className="flex justify-center">
               <div>
                 <button className="bg-white px-2 rounded-sm">
@@ -232,7 +232,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="mt-20 flex justify-center">
-              <p className="font-medium text-lg leading-[100%]">
+              <p className="font-medium text-lg leading-[100%] ">
                 Impowering industries <br />
                 with next-Gen Tech
               </p>
@@ -242,8 +242,8 @@ const Hero = () => {
       </div>
 
       {/* Mobile Bottom Section (NO Contact Button) */}
-      <div className="lg:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-45 text-center font-quantico ">
-        <p className="font-medium text-white text-lg leading-[100%] absolute top-138 left-45">
+      <div className="lg:hidden md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-42 text-center font-quantico ">
+        <p className="font-sm text-white text-[15px] leading-[100%] absolute top-118 left-50">
           Impowering industries <br />
           with next-Gen Tech
         </p>

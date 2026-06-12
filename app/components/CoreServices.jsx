@@ -111,7 +111,7 @@ const CoreServices = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          className="grid grid-cols-1 lg:grid-cols-4 gap-10 max-w-fit mx-1 md:mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-fit mx-1 md:mx-auto"
         >
           {services.map((service, index) => (
             <motion.div

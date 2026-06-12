@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   title: "Thekwane | Digital Solutions",
   description: "We build secure, scalable and innovative digital solutions.",
    icons: {
-    icon: "/image/logo.svg",
+    icon: "/image/logo.sv0g",
   },
 };
 

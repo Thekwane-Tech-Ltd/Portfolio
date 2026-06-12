@@ -97,6 +97,8 @@ const Services = () => {
       "Brand storytelling",
       "Educational animations",
       "Social media animation content",
+      "Product animation",
+      "Explainer video"
     ],
   },
   {

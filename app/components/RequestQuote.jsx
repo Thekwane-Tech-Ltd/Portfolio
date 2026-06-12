@@ -31,7 +31,7 @@ const RequestQuote = () => {
       </div>
 
       <motion.div
-        className="mx-auto text-center absolute top-10 md:top-40 md:left-50 left-5"
+        className="mx-auto text-center absolute top-10 md:top-20 md:left-0 lg:left-35 left-5"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}

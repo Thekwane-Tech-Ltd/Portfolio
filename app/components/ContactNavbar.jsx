@@ -103,8 +103,8 @@ const ContactNavbar = () => {
             Contact Us
           </button>
 
-          <h1 className="font-rammettoOne font-medium md:font-medium text-white text-[15.02px] md:text-[20.02px] lg:text-[32.02px] leading-[100%] mb-3">
-          Get in touch with a trusted  digital agency, software  development company, and blockchain  service provider  .
+          <h1 className="font-rammettoOne font-medium md:font-medium text-white text-[15.02px] md:text-[20.02px] lg:text-[25.02px] leading-[100%] mb-3">
+          Ready to elevate your brand? Partner with THEKWANE TECH LTD for custom software development, product animation, explainer videos, UI/UX design, branding, and blockchain solutions that engage audiences and drive business growth.
           </h1>
         </div>
       </div>
