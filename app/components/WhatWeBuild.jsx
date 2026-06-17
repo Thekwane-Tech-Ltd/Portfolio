@@ -28,7 +28,7 @@ const WhatWeBuild = () => {
     {
       title: "Digitaltrvst",
       description: "Digitaltrvst website",
-      image: "/image/Portfolioimg1.svg",
+      image: "/image/DigitalTrust4.jpeg",
       category: "Web Development",
       tags: ["React", "Node.js", "MongoDB"],
       links: " https://www.digitaltrvst.com/ ",
@@ -44,7 +44,7 @@ const WhatWeBuild = () => {
     {
       title: "Digitaltrvst App",
       description: "Secure banking application with biometric authentication",
-      image: "/image/portfolioimg2.svg",
+      image: "/image/DigitalTrust2.jpeg",
       category: "Mobile App",
       tags: ["React Native", "Firebase", "Biometrics"],
       links: " https://play.google.com/store/apps/details?id=com.afo.digitalmoney&pcampaignid=web_share ",
