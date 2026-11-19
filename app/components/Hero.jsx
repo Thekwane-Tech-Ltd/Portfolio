@@ -233,8 +233,8 @@ const Hero = () => {
             </div>
             <div className="mt-20 flex justify-center">
               <p className="font-medium text-lg leading-[100%] ">
-                Impowering industries <br />
-                with next-Gen Tech
+                Empowering industries <br />
+                with next-gen tech
               </p>
             </div>
           </div>
@@ -244,8 +244,8 @@ const Hero = () => {
       {/* Mobile Bottom Section (NO Contact Button) */}
       <div className="lg:hidden md:hidden bg-gradient-to-b from-[#69F79C] to-[#001219] h-42 text-center font-quantico ">
         <p className="font-sm text-white text-[15px] leading-[100%] absolute top-118 left-50">
-          Impowering industries <br />
-          with next-Gen Tech
+          Empowering industries <br />
+          with next-gen tech
         </p>
       </div>
     </section>

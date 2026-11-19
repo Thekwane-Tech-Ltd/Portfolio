@@ -5,6 +5,16 @@ import { CiFacebook, CiLinkedin, CiInstagram, CiTwitter } from "react-icons/ci";
 import { PiTiktokLogo } from "react-icons/pi";
 import Link from "next/link";
 
+// Add each profile URL to show its icon in the footer.
+// Icons with an empty url are hidden so visitors never hit a dead link.
+const socialLinks = [
+  { label: "Facebook", Icon: CiFacebook, url: "" },
+  { label: "LinkedIn", Icon: CiLinkedin, url: "" },
+  { label: "Instagram", Icon: CiInstagram, url: "" },
+  { label: "TikTok", Icon: PiTiktokLogo, url: "" },
+  { label: "X (Twitter)", Icon: CiTwitter, url: "" },
+];
+
 const Footer = () => {
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -40,18 +50,18 @@ const Footer = () => {
           <motion.div variants={fadeUp} className="text-center md:text-left">
             <img src="/image/logo.svg" alt="logo" className="w-50 mb-5 mx-auto md:mx-0" />
             <p className="max-w-md text-[17px] leading-[27px] opacity-90 mb-3">
-              Helping businesses stand out with <br /> powerful identities and
-              strategies that <br /> drive results.
+              Helping businesses stand out with <br /> powerful digital products and
+              <br /> visual experiences that drive results.
             </p>
             <img src="/image/Hline.svg" alt="divider" className="h-2 mb-5 mx-auto md:mx-0" />
             <ul className="flex items-center justify-center md:justify-start gap-1 text-2xl">
-              {[CiFacebook, CiLinkedin, CiInstagram, PiTiktokLogo, CiTwitter].map((Icon, i) => (
+              {socialLinks.filter((s) => s.url).map(({ Icon, url, label }) => (
                 <motion.li
-                  key={i}
+                  key={label}
                   whileHover={{ scale: 1.2, color: "#64EE97" }}
                   transition={{ duration: 0.3 }}
                 >
-                  <a href="#">
+                  <a href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
                     <Icon className="size-5" />
                   </a>
                 </motion.li>
@@ -79,7 +89,7 @@ const Footer = () => {
               <h6 className="font-bold text-[#16D612] text-[18px] text-left">LEGAL</h6>
               <ul className="text-[15px] font-medium text-left Leading-[100%]">
                 <li className="mb-5"><a href="#">Privacy </a></li>
-                <li className="mb-5"><a href="#">Terms & Condition</a></li>
+                <li className="mb-5"><a href="#">Terms & Conditions</a></li>
                 <li><a href="#">Returns Policy</a></li>
               </ul>
             </motion.div>
@@ -87,8 +97,8 @@ const Footer = () => {
             <motion.div className="font-quantico" variants={fadeUp}>
               <h6 className="font-bold text-[#16D612] text-[18px] text-left">HELP</h6>
               <ul className="text-[15px] font-medium text-left Leading-[100%]">
-                <li className="mb-5"><a href="#">Help & FAQ</a></li>
-                <li><a href="#">Terms & Condition</a></li>
+                <li className="mb-5"><Link href="/Contact">Help & FAQ</Link></li>
+                <li><Link href="/Contact">Contact Support</Link></li>
               </ul>
             </motion.div>
           </motion.div>

@@ -27,7 +27,6 @@ const Services = () => {
   }, []);
 
 
-  const startYourProjectBtn = "Hi, I’m interested in starting a project with THEKWANE TECH LTD. Can we discuss my ideas and get a quote?";
 
 
   const servicesData = [
@@ -44,8 +43,7 @@ const Services = () => {
   },
   {
     img: "/image/serviceimg2.svg",
-    title:
-      "Custom Software Development & IT Consulting Application Development",
+    title: "Custom Software Development & IT Consulting",
     desc: "Our custom software development services help businesses automate workflows, integrate systems, and build reliable digital infrastructure.",
     points: [
       "Backend & API development",
@@ -186,7 +184,7 @@ const Services = () => {
             </div>
 
             <a
-                href={`https://wa.me/2349030933281?text=${encodeURIComponent(startYourProjectBtn)}`}
+                href={`https://wa.me/2349030933281?text=${encodeURIComponent(`Hi, I’m interested in your ${service.title} service. Can we discuss my project and get a quote?`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

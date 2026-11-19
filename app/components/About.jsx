@@ -83,9 +83,9 @@ const About = () => {
         >
           THEKWANE TECH LTD{" "}
           <span className="text-[#000000]">
-            is a team- <br className="hidden md:block" />
-            driven digital agency delivering <br className="hidden md:block" />
-            scalable,secure, and future-ready <br className="hidden md:block" />
+            is a team-driven <br className="hidden md:block" />
+            digital agency delivering <br className="hidden md:block" />
+            scalable, secure, and future-ready <br className="hidden md:block" />
             digital products.
           </span>
         </motion.h5>
@@ -142,10 +142,10 @@ const About = () => {
         "
       >
         <h6 className="font-bold text-[22px] md:text-[30px] text-[#001219] leading-[110%]">
-          We have done the impossible
+          More than a vendor
         </h6>
         <p className="font-md text-[16px] md:text-[23px] text-[#001219] leading-[120%] mt-3">
-          we don’t just build projects, we build partnerships.
+          We don’t just build projects, we build partnerships.
         </p>
       </motion.div>
 
