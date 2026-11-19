@@ -57,9 +57,6 @@ const Montserrat = MontserratFont({
 export const metadata: Metadata = {
   title: "Thekwane | Digital Solutions",
   description: "We build secure, scalable and innovative digital solutions.",
-   icons: {
-    icon: "/image/logo.sv0g",
-  },
 };
 
 export default function RootLayout({

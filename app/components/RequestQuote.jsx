@@ -22,7 +22,7 @@ const RequestQuote = () => {
   };
 
   const message =
-    "Hi i would like to request a quote for my project and discuss my ideas.";
+    "Hi, I would like to request a quote for my project and discuss my ideas.";
 
   return (
     <div className="relative">

@@ -82,9 +82,6 @@ const cardVariants = {
 };
 
 const CoreServices = () => {
-  const getStartedBtn =
-    "Hi, I’d like to get started on a project and discuss my ideas.";
-
   return (
     <section>
       <div className="mx-1 lg:mx-17 my-10 p-6 lg:p-10 font-quantico">
@@ -149,7 +146,7 @@ const CoreServices = () => {
               </p>
 
               <a
-                href={`https://wa.me/2349030933281?text=${encodeURIComponent(getStartedBtn)}`}
+                href={`https://wa.me/2349030933281?text=${encodeURIComponent(`Hi, I’d like to get started on a ${service.title} project and discuss my ideas.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
